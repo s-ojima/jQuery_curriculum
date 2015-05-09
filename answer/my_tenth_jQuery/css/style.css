@@ -1,0 +1,61 @@
+.b-search-form {
+    display: table;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+}
+.b-search-form__keyword {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    width: 100%;
+    border: 2px #CCC solid;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 26px;
+}
+.b-search-form__submit-btn {
+    float: right;
+    font-size: 20px;
+    line-height: 40px;
+}
+.b-movie-list {
+    position: relative;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0 5px;
+    max-width: 600px;
+    width: 100%;
+}
+.b-movie-list__item {
+    float: left;
+    max-width: 200px;
+    width: 33.3%;
+    font-size: 9px;
+}
+.b-movie-list__item > a {
+    display: block;
+    overflow: hidden;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 5px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 1.5;
+}
+.b-movie-list__item > a > img { width: 100%; }
+.b-header {
+    margin-bottom: 10px;
+    font-size: 20px;
+    line-height: 20px;
+}
+.b-header__logo {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    background-image: url(../img/icon/gomitube_icon.png);
+    background-size: 20px;
+    vertical-align: -2px;
+}

@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<title></title>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/jquery.fs.boxer.css">
+</head>
+<body>
+<div class="wrapper">
+    <header class="podm">
+        <div class="b-header"><span class="b-header__logo"></span>GOMITUBE</div>
+        <form class="b-search-form">
+            <input type="text" class="b-search-form__keyword">
+            <input type="submit" class="b-search-form__submit-btn" value="検索">
+        </form>
+    </header>
+    <ul class="b-movie-list clearfix"></ul>
+</div>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.fs.boxer.js"></script>
+<script type="text/javascript">
+// Ajaxｷﾀ━━━━(ﾟ∀ﾟ)━━━━!!!!
+// ということで10個目の課題はYOUTUBE APIを利用した動画再生アプリケーション（ゴミチューブ）です。
+// まずアプリの流れを説明します。
+//  
+// ①: 検索ボックスがあるのでそこに任意の文字列を入力します。（入力フォームのフォーカスされると "検索" という文字列に変わります。）
+// ②:  "検索" と書かれている部分を押すか、Enterを ッターン! してください。
+// ③: 先ほど入力された文字列に関連のある動画が6件ずつ表示されます。（さりげなく "検索" という文字が "もっと" に変わっています。）
+// ④: 動画をクリックするとモーダルでiframeが立ち上がります。普通に再生出来ます。
+// ⑤:  "もっと" を押すともう6件分の動画が先ほどの動画の上に追加されます。
+// ⑥: 違う検索ワードが入力されて検索された場合は表示されている動画を削除後、検索された動画を追加。
+// 
+// 以上が全体の流れです。
+// ajaxとapiについても説明します。
+// ajaxは非同期通信を行ってデータ送信することをそう呼びます。
+// APIはリクエストに応じた結果を出力することをそう呼びます。（APIに対してアクセスすることをAPIを叩くと言ったりします。）
+// 今回の課題に置き換えて考えますと、
+// 任意の文字列を元にYOUTUBEのAPI（※URL）にアクセスし、その結果（JSON）を受け取るといった感じですねー。
+// 
+// ここからはプログラムの説明です。
+// まずajaxの書き方ですねー！詳しくは下を見て調べて頂戴。
+// 
+// https://developers.google.com/youtube/2.0/developers_guide_protocol_api_query_parameters?hl=ja
+// 
+// $.ajax({
+//     url: "http://gdata.youtube.com/feeds/api/videos",
+//     data: {
+//         "key": "value"
+//     }
+// })
+// .done(function(data) {
+//     成功した場合の処理
+// })
+// .fail(function(XMLHttpRequest, textStatus, errorThrown) {
+//     失敗した場合の処理
+// });
+// 
+// といった感じですねー。
+// あとはboxerというプラグインを使っているので、それも下のURLを見て試行錯誤してくださいー！
+// 
+// http://formstone.it/components/Boxer/demo/index.html
+// 
+// ちょっとヒント出しすぎたので、こっから先は自力で解いてください。
+// 中級の課題はこれで最後になりますが、ここまでやった時点ではjQueryを "書ける人" というよりも "話せる人" でしかないです。もっと上達したいのであれば上級までやった方がいいですが、かなり難しくなるので自力で調べてどうにか実装出来る力を養ってください。
+</script>
+</body>
+</html>
