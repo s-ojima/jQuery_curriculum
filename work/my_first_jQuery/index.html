@@ -91,8 +91,11 @@ $(function(){
         console.log(text);
     });
     // 第9問　id="q9"の要素をクリックしたらこの要素に設定してあるdata属性をconsoleに表示せよ。
+    $("#q10").find("li").click(function(){
+        var num = $(this).index();
+        $("#q11").find("li").eq(num).addClass("big");
+    });// 第10問　id="q10"の子要素をクリックしたら、その要素のインデックスと等しいid="q11"の子要素にbigというクラスを追加せよ。
 });
-// 第10問　id="q10"の子要素をクリックしたら、その要素のインデックスと等しいid="q11"の子要素にbigというクラスを追加せよ。
 </script>
 </body>
 </html>
